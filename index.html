@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>teclado</title>
+</head>
+
+<style>
+  .primerperiodo{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #000000;
+  }
+
+.titulo
+{
+position: absolute;
+top: -15px;
+left: 400px;
+}
+
+.hola
+{
+position: absolute;
+top: 250px;
+left: 370px;
+width: 650px;
+height: 300px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 80px;
+font-family: Freestyle Script;
+color: black;
+background: gray;
+}
+
+.teclaa
+{
+position: absolute;
+top: 250px;
+left: 370px;
+width: 650px;
+height: 300px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 80px;
+font-family: Freestyle Script;
+color: black;
+background: brown;
+}
+
+.teclas
+{
+position: absolute;
+top: 250px;
+left: 370px;
+width: 650px;
+height: 300px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 80px;
+font-family: Freestyle Script;
+color: black;
+background: pink;
+}
+
+.teclad
+{
+position: absolute;
+top: 250px;
+left: 370px;
+width: 650px;
+height: 300px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 80px;
+font-family: Freestyle Script;
+color: black;
+background: white;
+
+}
+
+.instrucciones
+{
+  position: absolute;
+top: 350px;
+left: 140px;
+width: 100px;
+height: 100px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 80px;
+font-family: Freestyle Script;
+color: blue;
+}
+
+.boton
+{
+position: absolute;
+top: 350px;
+left: 1070px;
+background-image: url("cielo.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+height: 100px;
+width: 190px;
+}
+
+</style>
+
+<center>
+<script>
+
+function color()
+{
+   if(event.code=="KeyA")
+   {
+     var n4=document.getElementById('hola');
+     n4.className='teclaa';
+    }
+
+     if(event.code=="KeyS")
+   {
+     var n4=document.getElementById('hola');
+     n4.className='teclas';
+    }
+
+     if(event.code=="KeyD")
+   {
+     var n4=document.getElementById('hola');
+     n4.className='teclad';
+    }
+
+}
+
+function frase() 
+{
+	var frase;
+	var frase = prompt("Ingrese una frase", "");
+   var mostrar=document.getElementById('hola');
+  mostrar.innerHTML=frase;
+}
+
+</script></center>
+<body  background="fondo.jpg" style="background-repeat: no-repeat;background-size: cover;"  onkeypress="color()">
+  <a class="primerperiodo" href=" https://isajara.github.io/periodo1/">Primer periodo</a>
+<div class="titulo"><img src="titulo.png" width="600" ></div>
+<center><div id="hola"  class="hola"> </div></center>
+<center><input type="button"  class="boton" onclick="frase()" id="frase"></center>
+<div id="instrucciones" class="instrucciones">Presione:<br>A S D</div>
+</body>
+</html>
